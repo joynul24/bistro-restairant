@@ -12,10 +12,10 @@ const Navbar = () => {
     </>
 
   return (
-    <div className="navbar text-white fixed z-10 max-w-7xl mx-auto">
+    <div className="navbar fixed z-10 max-w-7xl mx-auto">
       <div className="navbar-start">
         <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+          <div tabIndex={0} role="button" className="btn text-white btn-ghost lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -39,13 +39,13 @@ const Navbar = () => {
            {links}
           </ul>
         </div>
-        <div className="flex flex-col">
+        <div className="flex text-white flex-col">
         <h3 className="font-c uppercase md:text-2xl font-semibold md:font-bold">bistro boss</h3>
          <p className="uppercase md:font-semibold [letter-spacing:5px]">restairant</p>
         </div>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="font-i uppercase menu menu-horizontal px-1">
+        <ul className="text-white font-i uppercase menu menu-horizontal px-1">
          {links}
         </ul>
       </div>
