@@ -3,6 +3,7 @@ import SectionTitle from "../../shared/SectionTitle/SectionTitle";
 import MenuItem from "../../shared/MenuItem/MenuItem";
 
 const PopularMenu = () => {
+
     const [menu, setMenu] = useState([])
 
     useEffect(()=>{
@@ -13,7 +14,7 @@ const PopularMenu = () => {
             setMenu(popularMenu)
         })
     }, [])
-console.log(menu);
+
     return (
         <div>
             <SectionTitle
