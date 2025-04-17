@@ -15,7 +15,7 @@ const Order = () => {
   const [menu, setMenu] = useState([]);
 
   useEffect(() => {
-    fetch("menu.json")
+    fetch('http://localhost:5000/menu')
       .then((res) => res.json())
       .then((data) => setMenu(data));
   }, []);
@@ -37,55 +37,59 @@ const Order = () => {
         subTitle="Would you like to try a dish?"
       ></Cover>
 
-      <Tabs defaultIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
-        <TabList>
-          <Tab>SALAD</Tab>
-          <Tab>PIZZA</Tab>
-          <Tab>SOUPS</Tab>
-          <Tab>DESSERTS</Tab>
-          <Tab>DRINKS</Tab>
-        </TabList>
-        {/* salad */}
-        <TabPanel>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {salad.map((item) => (
-              <FoodCard key={item._id} item={item}></FoodCard>
-            ))}
-          </div>
-        </TabPanel>
-        {/* Pizza */}
-        <TabPanel>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {pizza.map((item) => (
-              <FoodCard key={item._id} item={item}></FoodCard>
-            ))}
-          </div>
-        </TabPanel>
-        {/* soup */}
-        <TabPanel>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {soup.map((item) => (
-              <FoodCard key={item._id} item={item}></FoodCard>
-            ))}
-          </div>
-        </TabPanel>
-        {/* desserts */}
-        <TabPanel>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {dessert.map((item) => (
-              <FoodCard key={item._id} item={item}></FoodCard>
-            ))}
-          </div>
-        </TabPanel>
-        {/* drinks */}
-        <TabPanel>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {drinks.map((item) => (
-              <FoodCard key={item._id} item={item}></FoodCard>
-            ))}
-          </div>
-        </TabPanel>
-      </Tabs>
+      <div className="mt-20">
+        <Tabs defaultIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
+         <div className="flex justify-center">
+         <TabList>
+            <Tab>SALAD</Tab>
+            <Tab>PIZZA</Tab>
+            <Tab>SOUPS</Tab>
+            <Tab>DESSERTS</Tab>
+            <Tab>DRINKS</Tab>
+          </TabList>
+         </div>
+          {/* salad */}
+          <TabPanel>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {salad.map((item) => (
+                <FoodCard key={item._id} item={item}></FoodCard>
+              ))}
+            </div>
+          </TabPanel>
+          {/* Pizza */}
+          <TabPanel>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {pizza.map((item) => (
+                <FoodCard key={item._id} item={item}></FoodCard>
+              ))}
+            </div>
+          </TabPanel>
+          {/* soup */}
+          <TabPanel>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {soup.map((item) => (
+                <FoodCard key={item._id} item={item}></FoodCard>
+              ))}
+            </div>
+          </TabPanel>
+          {/* desserts */}
+          <TabPanel>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {dessert.map((item) => (
+                <FoodCard key={item._id} item={item}></FoodCard>
+              ))}
+            </div>
+          </TabPanel>
+          {/* drinks */}
+          <TabPanel>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {drinks.map((item) => (
+                <FoodCard key={item._id} item={item}></FoodCard>
+              ))}
+            </div>
+          </TabPanel>
+        </Tabs>
+      </div>
     </div>
   );
 };

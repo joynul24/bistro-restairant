@@ -1,5 +1,4 @@
 const FoodCard = ({item}) => {
-    console.log(item);
     const {image, price, recipe, name} = item || {}
   return (
     <div className="card bg-base-100 shadow-sm">
@@ -17,7 +16,7 @@ const FoodCard = ({item}) => {
          {recipe}
         </p>
         <div className="card-actions justify-center">
-          <button className="mt-3 btn uppercase  border-0 border-b-4 btn-neutral btn-outline">add tot card</button>
+          <button className="mt-3 btn uppercase  border-0 hover:bg-[#111827] text-[#BB8506] border-b-4 border-b-[#BB8506] btn-neutral btn-outline">add tot card</button>
         </div>
       </div>
     </div>
