@@ -4,6 +4,7 @@ import Category from "../components/Home/Category/Category";
 import Featured from "../components/Home/Featured/Featured";
 import PopularMenu from "../components/Home/PopularMenu/PopularMenu";
 import Testimonials from "../components/Home/Testimonials/Testimonials";
+import GreetingCover from "../components/Home/GreetingCover/GreetingCover";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       </Helmet>
       <Banner></Banner>
       <Category></Category>
+      <GreetingCover></GreetingCover>
       <PopularMenu></PopularMenu>
       <Featured></Featured>
       <Testimonials></Testimonials>
