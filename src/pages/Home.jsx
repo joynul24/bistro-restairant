@@ -5,6 +5,7 @@ import Featured from "../components/Home/Featured/Featured";
 import PopularMenu from "../components/Home/PopularMenu/PopularMenu";
 import Testimonials from "../components/Home/Testimonials/Testimonials";
 import GreetingCover from "../components/Home/GreetingCover/GreetingCover";
+import CallUs from "../components/Home/CallUs/CallUs";
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
       <Category></Category>
       <GreetingCover></GreetingCover>
       <PopularMenu></PopularMenu>
+      <CallUs></CallUs>
       <Featured></Featured>
       <Testimonials></Testimonials>
     </div>
