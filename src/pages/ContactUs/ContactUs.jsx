@@ -55,7 +55,11 @@ const ContactUs = () => {
       </div>
 
      {/* contact us form */}
-     <form className="card-body mt-12 p-12 bg-[#F3F3F3] space-y-2">
+     <SectionTitle
+      subHeading='---Send Us a Message---'
+      heading='Contact Form'
+     ></SectionTitle>
+     <form className="card-body mt-12 md:p-12 bg-[#F3F3F3] space-y-2">
           <div className="flex flex-col md:flex-row gap-6 items-center">
           <div className="form-control w-full md:w-1/2">
             <label className="label">
@@ -94,8 +98,8 @@ const ContactUs = () => {
             <p className="text-gray-600 mb-2">Message</p>
          <textarea name="" className="bg-white pt-3 pl-3 outline-0 w-full" id="" placeholder="Write your message here" cols="" rows="10"></textarea>
          </div>
-          <div className="flex justify-center form-control mt-6">
-            <button className="btn bg-[#D1A054] border-0 flex items-center text-white">
+          <div className="md:flex md:justify-center w-full form-control mt-6">
+            <button className="btn bg-[#D1A054] border-0 w-full md:w-auto flex items-center text-white">
               Send Message <FiSend />
             </button>
           </div>
